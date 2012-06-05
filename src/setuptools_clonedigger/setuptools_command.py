@@ -60,9 +60,9 @@ class ClonediggerCommand(setuptools.Command):
         options = []
         for longopt, shortopt, desc in self.user_options:
             value = getattr(self, longopt.replace('-', '_'))
-            if value is True:
+            if value == 1 and longopt in self.boolean_options:
                 options.append('--{0}'.format(longopt))
             elif value is not None:
                 options.append('--{0}={1}'.format(longopt, value))
 
-        subprocess.check_output(['clonedigger'] + options)
+        subprocess.check_output(['clonedigger'] + options + ["src"])
