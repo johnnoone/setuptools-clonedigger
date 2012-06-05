@@ -12,7 +12,6 @@ install_requires = [
     'clonedigger'
 ]
 
-
 setup(name='setuptools_clonedigger',
     version=version,
     description="Setuptools command for clonedigger",

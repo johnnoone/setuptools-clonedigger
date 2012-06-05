@@ -1,4 +1,14 @@
-import subprocess
+try:
+    from subprocess import check_output
+except ImportError:
+    # pre2.7 compatibility
+    from subprocess import Popen, CalledProcessError
+    def check_output(args):
+        try:
+            return Popen(args).communicate()[0]
+        except OSError as e:
+            raise CalledProcessError(*e)
+
 import setuptools
 
 class ClonediggerCommand(setuptools.Command):
@@ -65,4 +75,4 @@ class ClonediggerCommand(setuptools.Command):
             elif value is not None:
                 options.append('--{0}={1}'.format(longopt, value))
 
-        subprocess.check_output(['clonedigger'] + options + ["src"])
+        check_output(['clonedigger'] + options + ["src"])
