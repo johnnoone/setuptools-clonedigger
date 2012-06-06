@@ -13,8 +13,8 @@ Usage
   python setup.py clonedigger
 
 
-Difference with the standalone library
---------------------------------------
+Differences with the standalone library
+---------------------------------------
 
 In order to not conflict with other setuptools commands, some options differ
 from the original library.

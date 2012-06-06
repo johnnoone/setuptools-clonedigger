@@ -17,43 +17,43 @@ class ClonediggerCommand(setuptools.Command):
     description = "run clonedigger on all your modules"
 
     user_options = [
-        ('clonedigger-file=', None, 'Output file.must be html or xml \
-                        ("clonedigger-output.html" by default)'),
+        ('clonedigger-file=', None, 'Output file.must be html or xml '
+                        '("clonedigger-output.html" by default)'),
         ('clonedigger-language=', None, 'the programming language'),
-        ('clonedigger-no-recursion', None, 'do not traverse directions \
-                        recursively'),
-        ('clonedigger-clustering-threshold=', None, 'read the paper for \
-                        semantics'),
-        ('clonedigger-distance-threshold=', None, 'the maximum amount of \
-                        differences between pair of sequences in clone pair \
-                        (5 by default). Larger value leads to larger amount \
-                        of false positives'),
-        ('clonedigger-hashing-depth=', None, 'default value if 1, read the \
-                        paper for semantics. Computation can be speeded up \
-                        by increasing this value (but some clones can be \
-                        missed)'),
-        ('clonedigger-size-threshold=', None, 'the minimum clone size. The \
-                        clone size for its turn is equal to the count of \
-                        lines of code in its the largest fragment'),
-        ('clonedigger-clusterize-using-dcup=', None, 'mark each statement \
-                        with its D-cup value instead of the most similar \
-                        pattern. This option together with \
-                        --clonedigger-hashing-depth=0 make it  possible to \
-                        catch all considered clones (but it is slow and \
-                        applicable only to small programs)'),
+        ('clonedigger-no-recursion', None, 'do not traverse directions '
+                        'recursively'),
+        ('clonedigger-clustering-threshold=', None, 'read the paper for '
+                        'semantics'),
+        ('clonedigger-distance-threshold=', None, 'the maximum amount of '
+                        'differences between pair of sequences in clone pair '
+                        '(5 by default). Larger value leads to larger amount '
+                        'of false positives'),
+        ('clonedigger-hashing-depth=', None, 'default value if 1, read the '
+                        'paper for semantics. Computation can be speeded up '
+                        'by increasing this value (but some clones can be '
+                        'missed)'),
+        ('clonedigger-size-threshold=', None, 'the minimum clone size. The '
+                        'clone size for its turn is equal to the count of '
+                        'lines of code in its the largest fragment'),
+        ('clonedigger-clusterize-using-dcup=', None, 'mark each statement '
+                        'with its D-cup value instead of the most similar '
+                        'pattern. This option together with '
+                        '--clonedigger-hashing-depth=0 make it  possible to '
+                        'catch all considered clones (but it is slow and '
+                        'applicable only to small programs)'),
         ('clonedigger-dont-print-time', None, 'do not print time'),
         ('clonedigger-force', None, ''),
-        ('clonedigger-force-diff', None, 'force highlighting of differences \
-                        based on the diff algorithm'),
-        ('clonedigger-fast', None, 'find only clones, which differ in \
-                        variable and function names and constants'),
+        ('clonedigger-force-diff', None, 'force highlighting of differences '
+                        'based on the diff algorithm'),
+        ('clonedigger-fast', None, 'find only clones, which differ in '
+                        'variable and function names and constants'),
         ('clonedigger-ignore-dir=', None, 'exclude directories from parsing'),
         ('clonedigger-eclipse-output=', None, 'for internal usage only'),
         ('clonedigger-report-unifiers', None, ''),
-        ('clonedigger-func-prefixes=', None, 'skip functions/methods with these \
-                        prefixes (provide a CSV string as argument)'),
-        ('clonedigger-file-list=', None, 'a file that contains a list of file \
-                        names that must be processed by Clone Digger'),
+        ('clonedigger-func-prefixes=', None, 'skip functions/methods with these '
+                        'prefixes (provide a CSV string as argument)'),
+        ('clonedigger-file-list=', None, 'a file that contains a list of file '
+                        'names that must be processed by Clone Digger'),
     ]
 
     boolean_options = [
