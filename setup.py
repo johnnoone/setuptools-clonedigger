@@ -12,7 +12,7 @@ install_requires = [
     'clonedigger'
 ]
 
-setup(name='setuptools_clonedigger',
+setup(name='setuptools-clonedigger',
     version=version,
     description="Setuptools command for clonedigger",
     long_description=README + '\n\n' + NEWS,
